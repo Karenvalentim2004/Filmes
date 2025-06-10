@@ -24,18 +24,25 @@ let filme3 = {
 let filme4 = {
     titulo:"Pecadores",
     foto: "filme4.jpg",
-    avaliacao:"10/10",
+    avaliacao:"07/10",
     duracao: "1h40m",
 }
 
+let filme5 = {
+    titulo:"Princesa e o Sapo",
+    foto: "filme5.jpg",
+    avaliacao:"10/10",
+    duracao: "2:00",
+}
+
 function fnMontarCartao(filmeAtual){
-    console.log(`
+    document.querySelector(".lista-filmes").innerHTML += `
         <div class="card-filme">
         <img src="img/${filmeAtual.foto}">
         <h3>${filmeAtual.titulo}</h3>
-        <span> ⭐ ${filmeAtual.avalicao}</span>
+        <span> ⭐ ${filmeAtual.avaliacao}</span>
         </div>
-         `)	
+         `
 }
 
 //DOM - Document Object Model
@@ -45,3 +52,4 @@ fnMontarCartao(filme1)
 fnMontarCartao(filme2)
 fnMontarCartao(filme3)
 fnMontarCartao(filme4)
+fnMontarCartao(filme5)
